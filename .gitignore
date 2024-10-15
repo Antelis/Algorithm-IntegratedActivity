@@ -1,0 +1,7 @@
+main
+*.o
+*.out
+*.exe
+*.log
+build/
+.vscode/
