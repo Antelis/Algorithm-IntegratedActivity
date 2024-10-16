@@ -10,8 +10,8 @@ clear
 # donde empezo el input
 printf "\n---start---\n"
 
-# Corre el programa solo si se complila correctamente
-#define el test file
+#define el test file a usar
 test=test1.txt
 
+# Corre el programa solo si se complila correctamente
 g++ main.cpp -o main.out && ./main.out < $test

@@ -14,5 +14,8 @@ int main(){
   int N;
   cin >> N;
 
+  vector<vector<int>> matrix = buildMatrix(N);
+  printMatrix(matrix);
+
   return 0;
 }
