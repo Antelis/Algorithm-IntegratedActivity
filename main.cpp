@@ -3,8 +3,8 @@ using namespace std;
 
 #include <vector>
 
-#include "distMatrix.h"
-#include "tsp.h"
+#include "hFiles/tsp.h"
+#include "hFiles/distMatrix.h"
 
 // Usen el input.sh para compilar todo
 // Ahi escriban los comandos que se necesiten para cmake 
