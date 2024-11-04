@@ -6,6 +6,7 @@ using namespace std;
 #include "hFiles/distCapMatrix.h"
 #include "hFiles/tsp.h"
 #include "hFiles/maxFlow.h"
+#include "hFiles/primMST.h"
 
 // Usen el input.sh para compilar todo
 // Ahi escriban los comandos que se necesiten para cmake 
@@ -31,6 +32,9 @@ int main(){
   cout << "\nCapacity matrix: " << endl;
   printMatrix(capMatrix);
 
+  // 1. Calculate optimal way to wire between cities (MST)
+  cout << "\nOptimal way to wire between cities: " << endl;
+  primMST(distMatrix, N);
 
   // 2. Find the shortest route for mail delivery (TSP)
   vector<int> trip = repNearesNeighbor(distMatrix);
@@ -38,7 +42,7 @@ int main(){
   tripPrinter(trip);
 
 
-  // 3. Calculate maximum information flow from the initial node to the final node 
+  // 3. Calculate maximum information flow from the initial node to the final node (MaxFlow)
   int maxFlow = fordFulkerson(capMatrix, N);
   cout << "\nThe maximum information flow from initial to final node is: " << maxFlow << endl;
 
