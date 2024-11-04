@@ -12,7 +12,7 @@ using namespace std;
 
 // Matrix Printer Function
 // O(N)
-void printMatrix(const vector< vector<int> > matrix){
+void printMatrix(const vector<vector<int>> matrix){
   for(int i = 0; i < matrix.size(); i++){
     for(int j = 0; j < matrix.size(); j++){
       cout << matrix[i][j] << " ";
@@ -23,30 +23,22 @@ void printMatrix(const vector< vector<int> > matrix){
 }
 
 
-// Adds the edges to the input based on the amount of inputs given to the graph
-// O(N)
-void addEdge(vector<int>& matrix){
-  string input;
-  cin.ignore();
+// Reads a row of integers from input and stores them in the provided vector
+void addEdge(vector<int>& row) {
+    string input;
+    getline(cin, input);
+    istringstream iss(input);
 
-  getline(cin, input);
-  istringstream iss(input);
-
-  vector<int> numbers;
-  int number;
-  while (iss >> number) {
-    numbers.push_back(number);
-  }
-
-  // Update the matrix row with the extracted numbers
-  for (int n = 0; n < numbers.size(); n++) {
-    matrix[n] = numbers[n];
-  }
+    int number;
+    int idx = 0;
+    while (iss >> number) {
+        row[idx++] = number;
+    }
 }
 
 
 // Returns a matrix given by the input
-// O(N)
+// O(N**2)
 vector< vector<int> > buildMatrix(const int N){  
   // Creates a matrix of infinite weight between all edges
   vector< vector<int> > matrix(N, vector<int>(N, INT_MAX));
