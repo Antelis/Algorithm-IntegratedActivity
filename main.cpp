@@ -3,8 +3,9 @@ using namespace std;
 
 #include <vector>
 
-#include "hFiles/tsp.h"
 #include "hFiles/distCapMatrix.h"
+#include "hFiles/tsp.h"
+#include "hFiles/maxFlow.h"
 
 // Usen el input.sh para compilar todo
 // Ahi escriban los comandos que se necesiten para cmake 
@@ -37,7 +38,9 @@ int main(){
   tripPrinter(trip);
 
 
-  // 3. Calculate maximum flow from node 0 to node N-1
+  // 3. Calculate maximum information flow from the initial node to the final node 
+  int maxFlow = fordFulkerson(capMatrix, N);
+  cout << "\nThe maximum information flow from initial to final node is: " << maxFlow << endl;
 
 
   return 0;
