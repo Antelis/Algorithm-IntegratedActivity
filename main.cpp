@@ -4,7 +4,7 @@ using namespace std;
 #include <vector>
 
 #include "hFiles/tsp.h"
-#include "hFiles/distMatrix.h"
+#include "hFiles/distCapMatrix.h"
 
 // Usen el input.sh para compilar todo
 // Ahi escriban los comandos que se necesiten para cmake 

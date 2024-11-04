@@ -14,4 +14,4 @@ printf "\n---start---\n"
 test=testFiles/test2.txt
 
 # Corre el programa solo si se complila correctamente
-g++ main.cpp -o main.out && ./main.out < $test
+g++ -std=c++11 main.cpp -o main.out && ./main.out < $test

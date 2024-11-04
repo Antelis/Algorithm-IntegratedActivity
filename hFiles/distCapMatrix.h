@@ -1,5 +1,5 @@
-#ifndef DISTMATRIX
-#define DISTMATRIX
+#ifndef DISTCAPMATRIX
+#define DISTCAPMATRIX
 
 #include <iostream>
 using namespace std;
@@ -12,7 +12,7 @@ using namespace std;
 
 // Matrix Printer Function
 // O(N)
-void printMatrix(const vector<vector<int>> matrix){
+void printMatrix(const vector< vector<int> > matrix){
   for(int i = 0; i < matrix.size(); i++){
     for(int j = 0; j < matrix.size(); j++){
       cout << matrix[i][j] << " ";
@@ -47,9 +47,9 @@ void addEdge(vector<int>& matrix){
 
 // Returns a matrix given by the input
 // O(N)
-vector<vector<int>> buildMatrix(const int N){  
+vector< vector<int> > buildMatrix(const int N){  
   // Creates a matrix of infinite weight between all edges
-  vector<vector<int>> matrix(N, vector<int>(N, INT_MAX));
+  vector< vector<int> > matrix(N, vector<int>(N, INT_MAX));
   
   for(int i = 0; i < N; i++){
     addEdge(matrix[i]);
