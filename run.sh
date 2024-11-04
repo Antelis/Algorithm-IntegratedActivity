@@ -11,7 +11,7 @@ clear
 printf "\n---start---\n"
 
 #define el test file a usar
-test=testFiles/test2.txt
+test=testFiles/test1.txt
 
 # Corre el programa solo si se complila correctamente
 g++ -std=c++11 main.cpp -o main.out && ./main.out < $test
