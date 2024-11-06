@@ -40,7 +40,6 @@ void addEdge(vector<int>& row) {
 // Returns a matrix given by the input
 // O(N**2)
 vector< vector<int> > buildMatrix(const int N){  
-  // Creates a matrix of infinite weight between all edges
   vector< vector<int> > matrix(N, vector<int>(N, INT_MAX));
   
   for(int i = 0; i < N; i++){
