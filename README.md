@@ -3,7 +3,7 @@ On this activity we:
 
 1.- Implemented Prim's algorithm to calculate the optimal way to wire between cities (hFiles/primMST.h). 
 
-2.- Implemented Nearest Neighbor algorithm to find the shortest route for mail delivery (hFiles/tsp.h).
+2.- Implemented Repetitive Nearest Neighbor algorithm to find the shortest route for mail delivery (hFiles/tsp.h).
 
 3.- Implemented Ford-Fulkerson's method with Edmonds-Karp's algorithm to calculate maximum information flow from the initial node to the final node (hFiles/maxFlow.h).
 
