@@ -10,21 +10,25 @@ using namespace std;
 #include <CGAL/Delaunay_triangulation_adaptation_traits_2.h>
 #include <CGAL/Delaunay_triangulation_adaptation_policies_2.h>
  
+// Type definitions for CGAL's data types
 typedef CGAL::Exact_predicates_inexact_constructions_kernel                  K;
 typedef CGAL::Delaunay_triangulation_2<K>                                    DT;
 typedef CGAL::Delaunay_triangulation_adaptation_traits_2<DT>                 AT;
 typedef CGAL::Delaunay_triangulation_caching_degeneracy_removal_policy_2<DT> AP;
 typedef CGAL::Voronoi_diagram_2<DT,AT,AP>                                    VD;
  
+// Type definitions for specific objects in the Voronoi diagram
 typedef AT::Site_2                    Site_2;
 typedef AT::Point_2                   Point_2;
  
+// Definitions for Voronoi diagram's result types
 typedef VD::Locate_result             Locate_result;
 typedef VD::Vertex_handle             Vertex_handle;
 typedef VD::Face_handle               Face_handle;
 typedef VD::Halfedge_handle           Halfedge_handle;
 typedef VD::Ccb_halfedge_circulator   Ccb_halfedge_circulator;
  
+// Function to print the endpoint of a halfedge (either source or target)
 void print_endpoint(Halfedge_handle e, bool is_src) {
   cout << "\t";
   if ( is_src ) {
@@ -58,12 +62,16 @@ int main()
   while ( ifq >> p ) {
     cout << "Plant in position (" << p.x() << "," << p.y() << ") " << flush;
     cout << endl;
-    Locate_result lr = vd.locate(p);
-    Face_handle* f = get_if<Face_handle>(&lr);
+
+    Locate_result lr = vd.locate(p); // Locate the Voronoi cell that contains the point p
+    Face_handle* f = get_if<Face_handle>(&lr); // Get the face (polygon) that contains the point
+    
     cout << "Points of the polygon (in counterclockwise order):" << endl;
+    // Get the circular list of edges (halfedges) that define the polygon's boundary
     Ccb_halfedge_circulator ec_start = (*f)->ccb();
     Ccb_halfedge_circulator ec = ec_start;
 
+    // Iterate through the edges of the Voronoi polygon and print their endpoints
     do {
       print_endpoint(ec, false);
     } while ( ++ec != ec_start );
