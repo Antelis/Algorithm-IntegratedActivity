@@ -1,3 +1,0 @@
-/Users/adelasolorio/Documents/Algorithm-IntegratedActivity/voronoi4/CMakeFiles/voronoi.dir
-/Users/adelasolorio/Documents/Algorithm-IntegratedActivity/voronoi4/CMakeFiles/edit_cache.dir
-/Users/adelasolorio/Documents/Algorithm-IntegratedActivity/voronoi4/CMakeFiles/rebuild_cache.dir
