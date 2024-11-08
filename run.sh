@@ -3,7 +3,6 @@
 # Quiten el comentario del OS que usen
 # Linux
 clear
-Windows
 # cls
 
 # Si tienen terminal que no borra la consola usen esto para ver
@@ -11,7 +10,7 @@ Windows
 printf "\n---start---\n"
 
 #define el test file a usar
-test=testFiles/test1.txt
+test=testFiles/test5.txt
 
 # Corre el programa solo si se complila correctamente
 # g++ -std=c++11 main.cpp -o main.out
