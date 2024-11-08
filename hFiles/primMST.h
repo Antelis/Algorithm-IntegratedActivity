@@ -7,6 +7,9 @@
 
 using namespace std;
 
+// Function that finds the Minimum Spanning Tree (MST) of a graph using Prim's algorithm
+// given an adjacency matrix and the number of vertices.
+// Time complexity: O(N^2)
 void primMST(const vector<vector<int>>& graph, int N) {
     vector<int> parent(N, -1);
     vector<int> key(N, INT_MAX);

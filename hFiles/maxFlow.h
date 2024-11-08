@@ -9,6 +9,7 @@
 using namespace std;
 
 // Function to perform a BFS to find an augmenting path
+// Time complexity: O(V + E)
 bool bfs(const vector<vector<int>>& residual, int source, int sink, vector<int>& parent) {
     int n = residual.size();
     vector<bool> visited(n, false);
@@ -38,6 +39,7 @@ bool bfs(const vector<vector<int>>& residual, int source, int sink, vector<int>&
 }
 
 // Function to calculate maximum flow using Ford-Fulkerson with Edmonds-Karp
+// Time complexity: O(V * E^2)
 int fordFulkerson(const vector<vector<int>>& capacity, int N) {
     int source = 0;
     int sink = N - 1;
