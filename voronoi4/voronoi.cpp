@@ -35,23 +35,23 @@ void print_endpoint(Halfedge_handle e, bool is_src) {
     else  cout << "point at infinity" << endl;
   }
 }
- 
+
+// 4. Use Voronoi diagram to determine closest exchange for a new service contract
 int main()
 {
-  ifstream ifs("data/test2.cin");
+  ifstream ifs("data/test2.cin"); // update to use different test cases
   assert( ifs );
  
   VD vd;
  
   Site_2 t;
   while ( ifs >> t ) { vd.insert(t); }
-
   
   ifs.close();
  
   assert( vd.is_valid() );
  
-  ifstream ifq("data/test2.cin");
+  ifstream ifq("data/test2.cin"); // update to use different test cases
   assert( ifq );
  
   Point_2 p;
@@ -70,6 +70,7 @@ int main()
 
     cout << endl;
   }
+
   ifq.close();
  
   return 0;
