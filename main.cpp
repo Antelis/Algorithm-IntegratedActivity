@@ -43,7 +43,5 @@ int main(){
   int maxFlow = fordFulkerson(capMatrix, N);
   cout << "\nThe maximum information flow from initial to final node is: " << maxFlow << endl;
 
-  // 4. Use Voronoi diagram to determine closest exchange for a new service contract
-
   return 0;
 }
