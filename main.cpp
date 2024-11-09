@@ -37,7 +37,7 @@ int main(){
   // 2. Find the shortest route for mail delivery (TSP)
   vector<int> trip = repNearestNeighbor(distMatrix);
   cout << "\nShortest route that visits each neighborhood and returns: " << endl;
-  tripPrinter(trip);
+  tripPrinter(trip, N);
 
   // 3. Calculate maximum information flow from the initial node to the final node (MaxFlow)
   int maxFlow = fordFulkerson(capMatrix, N);
