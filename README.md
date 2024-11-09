@@ -25,7 +25,7 @@ On this activity we:
   * Install CGAL
   * Navigate to the folder
     
-    ``cd voronoi 4``
+    ``cd voronoi4``
     
   * Set up CGAL
     
