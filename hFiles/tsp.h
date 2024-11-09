@@ -26,7 +26,7 @@ int tripTraveler(const vector<vector<int>> matrix, const vector<int> trip){
 // Function to print the trip generated from start to end
 void tripPrinter(const vector<int> trip, int N){
   // Check if the path found visist each vertex
-  if (trip.size() != N) {
+  if (trip.size() != N + 1) {
     cout << "There is no direct connection between each neighborhood," << endl;
     cout << "no complete path was found" << endl;
   }
