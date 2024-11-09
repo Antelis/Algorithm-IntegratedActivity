@@ -35,7 +35,7 @@ void primMST(const vector<vector<int>>& graph, int N) {
 
         // Update key values of the adjacent vertices
         for (int v = 0; v < N; ++v) {
-            if (graph[u][v] && !inMST[v] && graph[u][v] < key[v]) {
+            if (graph[u][v] > 0 && !inMST[v] && graph[u][v] < key[v]) { //Added conduituib fir negatuve numevbrs
                 parent[v] = u;
                 key[v] = graph[u][v];
             }
