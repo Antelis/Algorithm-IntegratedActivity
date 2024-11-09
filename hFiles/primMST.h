@@ -46,7 +46,7 @@ void primMST(const vector<vector<int>>& graph, int N) {
     cout << "Edge\tWeight" << endl;
     for (int i = 1; i < N; ++i) {
         if (parent[i] != -1) { // If the parent is valid
-            cout << parent[i] << " - " << i << "\t" << graph[i][parent[i]] << endl;
+            cout << (char)(parent[i] + 65) << " - " << (char)(i + 65) << "\t" << graph[i][parent[i]] << endl;
         }
     }
 }
