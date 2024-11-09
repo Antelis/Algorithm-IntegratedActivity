@@ -32,7 +32,7 @@ void addEdge(vector<int>& row) {
     int number;
     int idx = 0;
     while (iss >> number) {
-        row[idx++] = number;
+        row[idx++] = (number >= 0) ? number : 0; //Line added to make sure there are no negatuve values
     }
 }
 
