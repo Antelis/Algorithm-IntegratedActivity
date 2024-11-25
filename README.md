@@ -31,7 +31,7 @@ On this activity we:
     
     ``cgal_create_CMakeLists -s voronoi``
     
-    ``-DCMAKE_BUILD_TYPE=Release .``
+    ``cmake -DCMAKE_BUILD_TYPE=Release .``
     
   * Compile and run
     
